@@ -1,0 +1,3 @@
+---
+- hosts: webservers
+  remote_user: www-data
