@@ -1,0 +1,6 @@
+---
+- name: add vhosts
+  shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}"
+  args:
+    creates: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
+  with_items: "{{ vhosts }}"

@@ -3,3 +3,4 @@
   remote_user: www-data
   roles:
     - common
+    - vhosts
