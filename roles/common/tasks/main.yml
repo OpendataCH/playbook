@@ -8,3 +8,9 @@
 
 - name: add GitHub to known hosts
   known_hosts: host=github.com key="{{ lookup('file', 'github.pub') }}"
+
+- name: create directory for binaries
+  file: path=~/bin state=directory
+
+- name: install Composer
+  get_url: url=https://getcomposer.org/composer.phar dest=~/bin/composer mode=0755
