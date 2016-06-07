@@ -1,3 +1,10 @@
 ---
+- name: configure SSH authorized keys
+  authorized_key: user="{{ ansible_ssh_user }}" key="{{ item }}"
+  with_file:
+    - fabian.pub
+    - hannes.pub
+    - oleg.pub
+
 - name: add GitHub to known hosts
   known_hosts: host=github.com key="{{ lookup('file', 'github.pub') }}"
