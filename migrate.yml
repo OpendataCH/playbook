@@ -1,0 +1,17 @@
+---
+- hosts: webservers
+  remote_user: www-data
+  tasks:
+
+    - name: open SSH tunnel
+      shell: ssh -N -L 7380:localhost:6379 fabianvogler@opendata.nine.ch
+      async: 30
+
+    - name: enable replication
+      shell: redis-cli slaveof localhost 7380
+
+    - name: let Redis sync with master
+      pause: seconds=20
+
+    - name: disable replication
+      shell: redis-cli slaveof no one

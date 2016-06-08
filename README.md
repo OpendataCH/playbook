@@ -11,3 +11,9 @@ pip install ansible
 ```
 ansible-playbook -i hosts site.yml
 ```
+
+## Migration
+
+```
+ansible-playbook -i hosts migrate.yml
+```
