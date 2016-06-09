@@ -9,11 +9,11 @@ pip install ansible
 ## Usage
 
 ```
-ansible-playbook -i hosts site.yml
+ansible-playbook site.yml
 ```
 
 ## Migration
 
 ```
-ansible-playbook -i hosts migrate.yml
+ansible-playbook migrate.yml
 ```
