@@ -1,6 +1,5 @@
 ---
 - hosts: webservers
-  remote_user: www-data
   roles:
     - common
     - transport

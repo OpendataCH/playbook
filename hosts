@@ -1,2 +1,2 @@
 [webservers]
-opendata02.nine.ch
+opendata02.nine.ch ansible_user=www-data
