@@ -4,3 +4,4 @@ transport_root: "{{ documentroot }}/transport.opendata.ch"
 vhosts:
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
+    template: SSL_wildcard.opendata.ch
