@@ -41,3 +41,49 @@ vhosts:
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
     template: letsencrypt_noredirect
+
+cloudflare_email: hannes@opendata.ch
+cloufflare_api_token: "{{ vault_cloufflare_api_token }}"
+
+dns_opendata02_ip: 5.148.188.59
+dns_wernstrom_ip: 194.126.200.58
+dns_domains:
+  - domain: opendata.ch
+    records:
+      - {name: "@", type: A, value: "{{ dns_opendata02_ip }}"}
+
+      - {name: "en", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "energy", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "finance", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "fr", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "food", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "glam", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "make", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "transport", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "trans", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "www", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "www.transport", type: A, value: "{{ dns_opendata02_ip }}"}
+
+      - {name: "status.transport", type: A, value: "{{ dns_wernstrom_ip }}"}
+
+      - {name: "@", type: MX, value: "aspmx.l.google.com", priority: 1}
+      - {name: "@", type: MX, value: "alt1.aspmx.l.google.com", priority: 5}
+      - {name: "@", type: MX, value: "alt2.aspmx.l.google.com", priority: 5}
+      - {name: "@", type: MX, value: "aspmx2.googlemail.com", priority: 10}
+      - {name: "@", type: MX, value: "aspmx3.googlemail.com", priority: 10}
+      - {name: "@", type: MX, value: "aspmx4.googlemail.com", priority: 10}
+      - {name: "@", type: MX, value: "aspmx5.googlemail.com", priority: 10}
+
+      - {name: "calendar", type: CNAME, value: "ghs.google.com"}
+      - {name: "mail", type: CNAME, value: "ghs.google.com"}
+      - {name: "docs", type: CNAME, value: "ghs.google.com"}
+      - {name: "sites", type: CNAME, value: "ghs.google.com"}
+      - {name: "webmail", type: CNAME, value: "ghs.google.com"}
+      - {name: "groups", type: CNAME, value: "ghs.googlehosted.com"}
+
+      - {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
+      - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
+      - {name: "hack.energy", type: CNAME, value: "dribd.at"}
+      - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
+      - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
+      - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}

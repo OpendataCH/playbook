@@ -1,0 +1,16 @@
+---
+- name: configure DNS records
+  local_action:
+      module: cloudflare_dns
+      zone: "{{ item.0.domain }}"
+      record: "{{ item.1.name }}"
+      type: "{{ item.1.type }}"
+      value: "{{ item.1.value }}"
+      ttl: "{{ item.1.ttl | default(omit) }}"
+      priority: "{{ item.1.priority | default(omit) }}"
+      account_email: "{{ cloudflare_email }}"
+      account_api_token: "{{ cloufflare_api_token }}"
+      state: present
+  with_subelements:
+    - "{{ dns_domains }}"
+    - records

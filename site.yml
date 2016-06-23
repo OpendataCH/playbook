@@ -3,6 +3,7 @@
   vars_files:
     - vault.yml
   roles:
+    - dns
     - common
     - databases
     - opendata_ch
