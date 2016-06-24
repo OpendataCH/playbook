@@ -6,6 +6,9 @@
 pip install ansible
 ```
 
+You also need a file with the name `vault_password.txt` in the root directory 
+of the project. Ask me for the file.
+
 ## Usage
 
 ```
@@ -15,7 +18,8 @@ ansible-playbook site.yml
 ## Migration
 
 ```
-ansible-playbook migrate.yml
+ansible-playbook migrate-opendata-ch.yml
+ansible-playbook migrate-transport.yml
 ```
 
 ## Vault
