@@ -17,3 +17,12 @@ ansible-playbook site.yml
 ```
 ansible-playbook migrate.yml
 ```
+
+## Vault
+
+To access the Vault a file with the name `vault_password.txt` needs to exist in 
+the root directory of the project. Ask me for the file.
+
+```
+ansible-vault edit group_vars/webservers/vault.yml
+```
