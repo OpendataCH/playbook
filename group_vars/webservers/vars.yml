@@ -3,12 +3,23 @@ documentroot: /home/www-data
 opendata_ch_root: "{{ documentroot }}/opendata.ch"
 transport_root: "{{ documentroot }}/transport.opendata.ch"
 
+opendata_ch_database_name: nmd_opendata_ch
+opendata_ch_database_user: nmd_opendata_ch
 opendata_ch_database_password: "{{ vault_opendata_ch_database_password }}"
 
 databases:
-  - name: nmd_opendata_ch
-    user: nmd_opendata_ch
+  - name: "{{ opendata_ch_database_name }}"
+    user: "{{ opendata_ch_database_user }}"
     password: "{{ opendata_ch_database_password }}"
+
+opendata_ch_wordpress_auth_key: "{{ vault_opendata_ch_wordpress_auth_key }}"
+opendata_ch_wordpress_secure_auth_key: "{{ vault_opendata_ch_wordpress_secure_auth_key }}"
+opendata_ch_wordpress_logged_in_key: "{{ vault_opendata_ch_wordpress_logged_in_key }}"
+opendata_ch_wordpress_nonce_key: "{{ vault_opendata_ch_wordpress_nonce_key }}"
+opendata_ch_wordpress_auth_salt: "{{ vault_opendata_ch_wordpress_auth_salt }}"
+opendata_ch_wordpress_secure_auth_salt: "{{ vault_opendata_ch_wordpress_secure_auth_salt }}"
+opendata_ch_wordpress_logged_in_salt: "{{ vault_opendata_ch_wordpress_logged_in_salt }}"
+opendata_ch_wordpress_nonce_salt: "{{ vault_opendata_ch_wordpress_nonce_salt }}"
 
 vhosts:
   - servername: transport.opendata.ch
