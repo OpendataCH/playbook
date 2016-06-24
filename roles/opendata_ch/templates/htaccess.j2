@@ -1,0 +1,60 @@
+RewriteEngine On
+
+# Redirect okfn.ch to opendata.ch
+RewriteCond %{HTTP_HOST} okfn\.ch$ [NC]
+RewriteRule ^(.*)$ http://opendata.ch/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} swissdataspace\.ch$ [NC]
+RewriteRule ^(.*)$ http://opendata.ch/$1 [R=301,L]
+
+# Redirect from old wiki URLs to new wiki URLs
+RewriteRule ^doku.php http://make.opendata.ch/wiki/doku.php [R=301,L,QSA]
+
+RewriteRule ^/?schule.*$ http://make.opendata.ch/?page_id=795
+RewriteRule ^/?school.*$ http://make.opendata.ch/?page_id=806
+RewriteRule ^/?ecole.*$ http://make.opendata.ch/?page_id=912
+RewriteRule ^/?legal.*$ http://make.opendata.ch/?page_id=541
+
+# Redirect French users to French site
+RewriteCond %{HTTP_HOST} make\.opendata\.ch$ [NC]
+RewriteCond %{HTTP:Accept-Language} ^(fr.*) [NC]
+RewriteRule ^/$ /?lang=fr [L,R=301,QSA]
+
+RewriteCond %{HTTP_HOST} opendata\.ch$ [NC]
+RewriteCond %{HTTP:Accept-Language} ^(fr.*) [NC]
+RewriteRule ^/$ http://fr.opendata.ch/ [L,R=301,QSA]
+
+# Make PHP accept big stuff
+php_value post_max_size 301M
+php_value upload_max_filesize 300M
+
+# BEGIN W3TC Browser Cache
+<IfModule mod_deflate.c>
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/json
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>
+# END W3TC Browser Cache
+# BEGIN WordPress
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+# uploaded files
+RewriteRule ^([_0-9a-zA-Z-]+/)?files/(.+) wordpress/wp-includes/ms-files.php?file=$2 [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule  ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule  ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]
+# END WordPress

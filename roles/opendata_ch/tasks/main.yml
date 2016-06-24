@@ -10,3 +10,6 @@
 
 - name: create wp-config.php
   template: src=wp-config.php.j2 dest="{{ opendata_ch_root }}/wp-config.php"
+
+- name: create .htaccess
+  template: src=htaccess.j2 dest="{{ opendata_ch_root }}/.htaccess"
