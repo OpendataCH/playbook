@@ -2,6 +2,14 @@
 documentroot: /home/www-data
 opendata_ch_root: "{{ documentroot }}/opendata.ch"
 transport_root: "{{ documentroot }}/transport.opendata.ch"
+
+opendata_ch_database_password: "{{ vault_opendata_ch_database_password }}"
+
+databases:
+  - name: nmd_opendata_ch
+    user: nmd_opendata_ch
+    password: "{{ opendata_ch_database_password }}"
+
 vhosts:
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
