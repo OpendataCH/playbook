@@ -1,0 +1,24 @@
+---
+- hosts: webservers
+  tasks:
+
+    - name: get Wordpress content
+      command: rsync --times --recursive --compress --owner --group --usermap=*:www-data --groupmap=*:www-data --exclude 'cache' --exclude 'plugins' --exclude 'themes' fabianvogler@opendata.nine.ch:/var/www/wordpress/wp-content/ "{{ opendata_ch_root }}/wp-content"
+
+    - name: get MySQL database dump
+      command: rsync --times --compress fabianvogler@opendata.nine.ch:/var/backups/mysql_2016-06-24.sql.gz /home/www-data/opendata_ch.sql.gz
+
+    - name: import MySQL database
+      shell: zcat /home/www-data/opendata_ch.sql.gz | mysql --user="{{ opendata_ch_database_user }}" --password="{{ opendata_ch_database_password }}" "{{ opendata_ch_database_name }}"
+
+    - name: change URLs in database
+      command: mysql --user="{{ opendata_ch_database_user }}" --password="{{ opendata_ch_database_password }}" "{{ opendata_ch_database_name }}" --execute="UPDATE {{ item }} SET option_value = CONCAT(option_value, '/wordpress') WHERE option_name = 'siteurl';"
+      with_items:
+        - wp_options
+        - wp_2_options
+        - wp_3_options
+        - wp_4_options
+        - wp_5_options
+        - wp_6_options
+        - wp_8_options
+        - wp_11_options
