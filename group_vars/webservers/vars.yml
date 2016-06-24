@@ -22,9 +22,26 @@ opendata_ch_wordpress_logged_in_salt: "{{ vault_opendata_ch_wordpress_logged_in_
 opendata_ch_wordpress_nonce_salt: "{{ vault_opendata_ch_wordpress_nonce_salt }}"
 
 vhosts:
-  - servername: transport.opendata.ch
-    documentroot: "{{ transport_root }}/web"
-    template: SSL_wildcard.opendata.ch
   - servername: opendata.ch
     documentroot: "{{ opendata_ch_root }}"
+    template: SSL_wildcard.opendata.ch
+    aliases:
+      - de.opendata.ch
+      - fr.opendata.ch
+      - en.opendata.ch
+      - new.opendata.ch
+      - parent.opendata.ch
+      - make.opendata.ch
+      - glam.opendata.ch
+      - trans.opendata.ch
+      - finance.opendata.ch
+      - energy.opendata.ch
+      - www.okfn.ch
+      - okfn.ch
+      - www.offenedaten.ch
+      - offenedaten.ch
+      - swissdataspace.ch
+      - www.swissdataspace.ch
+  - servername: transport.opendata.ch
+    documentroot: "{{ transport_root }}/web"
     template: SSL_wildcard.opendata.ch

@@ -4,3 +4,15 @@
   args:
     creates: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
   with_items: "{{ vhosts }}"
+
+- command: sudo nine-manage-vhosts virtual-host list --json
+  register: vhost_aliases_result
+  always_run: yes
+  changed_when: false
+
+- name: add vhost aliases
+  shell: sudo nine-manage-vhosts alias create "{{ item.1 | quote }}" --virtual-host="{{ item.0.servername | quote }}"
+  when: item.1 not in vhost_aliases_result.stdout
+  with_subelements:
+    - "{{ vhosts | selectattr('aliases', 'defined') | list }}"
+    - aliases
