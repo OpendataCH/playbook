@@ -1,7 +1,11 @@
 ---
 documentroot: /home/www-data
+opendata_ch_root: "{{ documentroot }}/opendata.ch"
 transport_root: "{{ documentroot }}/transport.opendata.ch"
 vhosts:
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
+    template: SSL_wildcard.opendata.ch
+  - servername: opendata.ch
+    documentroot: "{{ opendata_ch_root }}"
     template: SSL_wildcard.opendata.ch
