@@ -13,3 +13,6 @@
 
 - name: create .htaccess
   template: src=htaccess.j2 dest="{{ opendata_ch_root }}/.htaccess"
+
+- name: add cron job for Composer updates
+  cron: name="composer update opendata.ch" minute=0 hour=16 weekday=0 job="echo \"$(date +'\%Y-\%m-\%d \%T') composer update\" >> {{ ansible_env.HOME }}/composer-update.log; {{ ansible_env.HOME }}/bin/composer update --no-interaction --prefer-dist --no-dev --working-dir={{ opendata_ch_root }} >> {{ ansible_env.HOME }}/composer-update.log 2>&1"
