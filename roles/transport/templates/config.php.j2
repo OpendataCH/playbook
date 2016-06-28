@@ -11,10 +11,10 @@ $app['buzz.client'] = $client;
 
 $app['monolog.level'] = Monolog\Logger::ERROR;
 
-$app['redis.config'] = array('host' => 'localhost', 'port' => 6379);
+$app['redis.config'] = ['host' => 'localhost', 'port' => 6379];
 
-$app['stats.config'] = array('enabled' => true);
+$app['stats.config'] = ['enabled' => true];
 
-$app['rate_limiting.config'] = array('enabled' => true, 'limit' => 300);
+$app['rate_limiting.config'] = ['enabled' => true, 'limit' => 300];
 
-$app['proxy'] = array('127.0.0.1');
+$app['proxy'] = ['127.0.0.1'];
