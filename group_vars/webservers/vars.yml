@@ -2,7 +2,6 @@
 documentroot: /home/www-data
 opendata_ch_root: "{{ documentroot }}/opendata.ch"
 transport_root: "{{ documentroot }}/transport.opendata.ch"
-repository_root: "{{ documentroot }}/repository.opendata.ch"
 
 opendata_ch_database_name: nmd_opendata_ch
 opendata_ch_database_user: nmd_opendata_ch
@@ -46,8 +45,3 @@ vhosts:
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
     template: SSL_wildcard.opendata.ch
-  - servername: repository.opendata.ch
-    documentroot: "{{ repository_root }}"
-    template: SSL_wildcard.opendata.ch
-    aliases:
-      - repo.opendata.ch

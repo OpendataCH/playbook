@@ -1,6 +1,0 @@
----
-- name: create document root
-  file: path="{{ repository_root }}" state=directory
-
-- name: create .htaccess
-  template: src=htaccess.j2 dest="{{ repository_root }}/.htaccess"
