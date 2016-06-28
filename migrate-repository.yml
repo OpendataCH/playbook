@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  tasks:
+
+    - name: get repository content
+      command: rsync --times --recursive --compress --owner --group --usermap=*:www-data --groupmap=*:www-data --exclude '.ftpquota' fabianvogler@opendata.nine.ch:/var/www/repository/ "{{ repository_root }}"
