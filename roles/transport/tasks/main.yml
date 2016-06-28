@@ -10,3 +10,6 @@
 
 - name: create config.php
   template: src=config.php.j2 dest="{{ transport_root }}/config.php"
+
+- name: create .htaccess
+  template: src=htaccess.j2 dest="{{ transport_root }}/.htaccess"
