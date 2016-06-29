@@ -2,6 +2,7 @@
 documentroot: /home/www-data
 opendata_ch_root: "{{ documentroot }}/opendata.ch"
 transport_root: "{{ documentroot }}/transport.opendata.ch"
+wiki_root: "{{ documentroot }}/opendata.ch/wiki"
 
 opendata_ch_database_name: nmd_opendata_ch
 opendata_ch_database_user: nmd_opendata_ch

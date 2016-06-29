@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  tasks:
+
+    - name: get Wiki
+      command: rsync --times --recursive --compress --owner --group --usermap=*:www-data --groupmap=*:www-data fabianvogler@opendata.nine.ch:/var/www/wordpress/wiki/ "{{ wiki_root }}"
