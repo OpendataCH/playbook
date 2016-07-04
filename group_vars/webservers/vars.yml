@@ -25,7 +25,7 @@ opendata_ch_wordpress_nonce_salt: "{{ vault_opendata_ch_wordpress_nonce_salt }}"
 vhosts:
   - servername: opendata.ch
     documentroot: "{{ opendata_ch_root }}"
-    template: SSL_wildcard.opendata.ch
+    template: default_letsencrypt_https
     aliases:
       - fr.opendata.ch
       - en.opendata.ch
@@ -40,4 +40,4 @@ vhosts:
       - www.swissdataspace.ch
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
-    template: SSL_wildcard.opendata.ch
+    template: default_letsencrypt_https
