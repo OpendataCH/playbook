@@ -1,11 +1,19 @@
 ---
+- name: create Let's Encrypt certificates
+  shell: sudo nine-manage-vhosts certificate create --virtual-host="{{ item.servername | quote }}"
+  args:
+    creates: "/etc/ssl/letsencrypt/certs/{{ item.servername }}/cert.pem"
+  when: item.template == "default_letsencrypt_https"
+  with_items: "{{ vhosts }}"
+
 - name: add vhosts
   shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}" --template="{{ item.template | default(default) | quote }}"
   args:
     creates: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
   with_items: "{{ vhosts }}"
 
-- command: sudo nine-manage-vhosts virtual-host list --json
+- name: get existing vhost aliases
+  shell: sudo nine-manage-vhosts virtual-host list --json
   register: vhost_aliases_result
   always_run: yes
   changed_when: false
