@@ -27,18 +27,13 @@ vhosts:
     documentroot: "{{ opendata_ch_root }}"
     template: SSL_wildcard.opendata.ch
     aliases:
-      - de.opendata.ch
       - fr.opendata.ch
       - en.opendata.ch
-      - new.opendata.ch
-      - parent.opendata.ch
       - make.opendata.ch
       - glam.opendata.ch
       - trans.opendata.ch
       - finance.opendata.ch
       - energy.opendata.ch
-      - www.okfn.ch
-      - okfn.ch
       - www.offenedaten.ch
       - offenedaten.ch
       - swissdataspace.ch
