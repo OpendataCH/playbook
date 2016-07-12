@@ -19,8 +19,25 @@
  * @package WordPress
  */
 
+$hosts = [
+    'opendata.ch',
+    'fr.opendata.ch',
+    'make.opendata.ch',
+    'glam.opendata.ch',
+    'finance.opendata.ch',
+    'energy.opendata.ch',
+];
+
 define('WP_CONTENT_DIR', __DIR__  . '/wp-content');
-define('WP_CONTENT_URL', 'http://opendata.ch/wp-content');
+
+$host = $_SERVER['HTTP_HOST'];
+$scheme = $_SERVER['REQUEST_SCHEME'];
+
+if (in_array($host, $hosts)) {
+    define('WP_CONTENT_URL', $scheme . '://' . $host . '/wp-content');
+} else {
+    define('WP_CONTENT_URL', 'http://opendata.ch/wp-content');
+}
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
