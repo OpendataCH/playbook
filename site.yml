@@ -1,5 +1,7 @@
 ---
 - hosts: webservers
+  vars_files:
+    - vault.yml
   roles:
     - common
     - databases
