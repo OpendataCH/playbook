@@ -5,6 +5,7 @@
     - fabian.pub
     - hannes.pub
     - oleg.pub
+    - travis.pub
 
 - name: add GitHub to known hosts
   known_hosts: host=github.com key="{{ lookup('file', 'github.pub') }}"
