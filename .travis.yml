@@ -9,6 +9,9 @@ script:
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_564691d3c8cd_key -iv $encrypted_564691d3c8cd_iv -in vault_password.txt.enc -out vault_password.txt -d
 
+addons:
+  ssh_known_hosts: opendata02.nine.ch
+
 deploy:
   provider: script
   skip_cleanup: true
