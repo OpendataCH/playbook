@@ -11,6 +11,7 @@ before_deploy:
 
 deploy:
   provider: script
+  skip_cleanup: true
   script: ansible-playbook site.yml
   on:
     branch: master
