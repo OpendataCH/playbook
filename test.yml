@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  roles:
+    - common
+    - databases
+    - opendata_ch
+    - transport
+    - vhosts

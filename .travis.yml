@@ -4,4 +4,4 @@ install:
   - pip install ansible
 
 script:
-  - ansible-playbook --syntax-check site.yml
+  - ANSIBLE_VAULT_PASSWORD_FILE= ansible-playbook --syntax-check test.yml
