@@ -34,6 +34,7 @@ vhosts:
       - trans.opendata.ch
       - finance.opendata.ch
       - energy.opendata.ch
+      - food.opendata.ch
       - www.offenedaten.ch
       - offenedaten.ch
       - swissdataspace.ch
