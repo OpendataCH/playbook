@@ -1,6 +1,6 @@
 ---
 - name: clone project
-  git: repo="git@github.com:fabian/opendata.ch.git" dest="{{ opendata_ch_root }}"
+  git: repo="https://github.com/OpendataCH/opendata.ch.git" dest="{{ opendata_ch_root }}"
   register: opendata_ch_clone
 
 - name: install Composer dependencies
