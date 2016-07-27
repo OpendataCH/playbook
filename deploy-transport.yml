@@ -1,4 +1,6 @@
 ---
 - hosts: webservers
+  vars_files:
+    - vault.yml
   roles:
     - transport

@@ -1,4 +1,6 @@
 ---
 - hosts: webservers
+  vars_files:
+    - vault.yml
   roles:
     - opendata_ch
