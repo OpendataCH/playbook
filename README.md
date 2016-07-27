@@ -15,13 +15,6 @@ of the project. Ask me for the file.
 ansible-playbook site.yml
 ```
 
-## Migration
-
-```
-ansible-playbook migrate-opendata-ch.yml
-ansible-playbook migrate-transport.yml
-```
-
 ## Vault
 
 To access the Vault a file with the name `vault_password.txt` needs to exist in 
