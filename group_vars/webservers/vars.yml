@@ -37,8 +37,6 @@ vhosts:
       - food.opendata.ch
       - www.offenedaten.ch
       - offenedaten.ch
-      - swissdataspace.ch
-      - www.swissdataspace.ch
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
     template: letsencrypt_noredirect

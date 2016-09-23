@@ -4,9 +4,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} okfn\.ch$ [NC]
 RewriteRule ^(.*)$ http://opendata.ch/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} swissdataspace\.ch$ [NC]
-RewriteRule ^(.*)$ http://opendata.ch/$1 [R=301,L]
-
 # Redirect from old wiki URLs to new wiki URLs
 RewriteRule ^doku.php http://make.opendata.ch/wiki/doku.php [R=301,L,QSA]
 
