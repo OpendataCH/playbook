@@ -21,6 +21,11 @@ RewriteCond %{HTTP_HOST} opendata\.ch$ [NC]
 RewriteCond %{HTTP:Accept-Language} ^(fr.*) [NC]
 RewriteRule ^/$ http://fr.opendata.ch/ [L,R=301,QSA]
 
+# Redirect food.opendata.ch to https://
+RewriteCond %{HTTP_HOST} food\.opendata\.ch$ [NC]
+RewriteCond %{HTTPS} !on
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L,QSA]
+
 # Make PHP accept big stuff
 php_value post_max_size 301M
 php_value upload_max_filesize 300M
