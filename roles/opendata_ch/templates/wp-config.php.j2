@@ -37,7 +37,7 @@ $scheme = $_SERVER['REQUEST_SCHEME'];
 if (in_array($host, $hosts)) {
     define('WP_CONTENT_URL', $scheme . '://' . $host . '/wp-content');
 } else {
-    define('WP_CONTENT_URL', 'http://opendata.ch/wp-content');
+    define('WP_CONTENT_URL', 'https://opendata.ch/wp-content');
 }
 
 // ** MySQL settings - You can get this info from your web host ** //
@@ -106,8 +106,8 @@ define('DISALLOW_FILE_MODS', true);
 
 define('WPLANG', 'de_DE');
 
-define('WP_HOME', 'http://opendata.ch/');
-define('WP_SITEURL', 'http://opendata.ch/wordpress/');
+define('WP_HOME', 'https://opendata.ch/');
+define('WP_SITEURL', 'https://opendata.ch/wordpress/');
 
 define('WP_ALLOW_MULTISITE', true);
 define('SUBDOMAIN_INSTALL', true);
