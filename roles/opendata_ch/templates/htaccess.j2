@@ -2,15 +2,15 @@ RewriteEngine On
 
 # Redirect okfn.ch to opendata.ch
 RewriteCond %{HTTP_HOST} okfn\.ch$ [NC]
-RewriteRule ^(.*)$ http://opendata.ch/$1 [R=301,L]
+RewriteRule ^(.*)$ https://opendata.ch/$1 [R=301,L]
 
 # Redirect from old wiki URLs to new wiki URLs
-RewriteRule ^doku.php http://make.opendata.ch/wiki/doku.php [R=301,L,QSA]
+RewriteRule ^doku.php https://make.opendata.ch/wiki/doku.php [R=301,L,QSA]
 
-RewriteRule ^/?schule.*$ http://make.opendata.ch/?page_id=795
-RewriteRule ^/?school.*$ http://make.opendata.ch/?page_id=806
-RewriteRule ^/?ecole.*$ http://make.opendata.ch/?page_id=912
-RewriteRule ^/?legal.*$ http://make.opendata.ch/?page_id=541
+RewriteRule ^/?schule.*$ https://make.opendata.ch/?page_id=795
+RewriteRule ^/?school.*$ https://make.opendata.ch/?page_id=806
+RewriteRule ^/?ecole.*$ https://make.opendata.ch/?page_id=912
+RewriteRule ^/?legal.*$ https://make.opendata.ch/?page_id=541
 
 # Redirect French users to French site
 RewriteCond %{HTTP_HOST} make\.opendata\.ch$ [NC]
@@ -19,10 +19,9 @@ RewriteRule ^/$ /?lang=fr [L,R=301,QSA]
 
 RewriteCond %{HTTP_HOST} opendata\.ch$ [NC]
 RewriteCond %{HTTP:Accept-Language} ^(fr.*) [NC]
-RewriteRule ^/$ http://fr.opendata.ch/ [L,R=301,QSA]
+RewriteRule ^/$ https://fr.opendata.ch/ [L,R=301,QSA]
 
-# Redirect food.opendata.ch to https://
-RewriteCond %{HTTP_HOST} food\.opendata\.ch$ [NC]
+# Redirect to https://
 RewriteCond %{HTTPS} !on
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L,QSA]
 
