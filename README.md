@@ -1,15 +1,11 @@
 # Opendata.ch Ansible Playbook
 
-## Installation
-
-```
-pip install ansible
-```
-
-You also need a file with the name `vault_password.txt` in the root directory 
-of the project. Ask me for the file.
-
 ## Usage
+
+Most changes can be made in the file `vars.yml`. Commit and push your changes 
+to [GitHub](https://github.com/OpendataCH/playbook) 
+and [Travis CI](https://travis-ci.org/OpendataCH/playbook) will execute the 
+following command which applies the changes to the server:
 
 ```
 ansible-playbook site.yml
@@ -22,4 +18,12 @@ the root directory of the project. Ask me for the file.
 
 ```
 ansible-vault edit vault.yml
+```
+
+## Installation
+
+Only needed if you want to run Ansible locally to debug something.
+
+```
+pip install ansible
 ```
