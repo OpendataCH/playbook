@@ -2,6 +2,7 @@
 - hosts: webservers
   vars_files:
     - vault.yml
+    - vars.yml
   tasks:
 
     - name: get Wiki
