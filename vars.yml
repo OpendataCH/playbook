@@ -45,7 +45,7 @@ cloudflare_email: hannes@opendata.ch
 cloufflare_api_token: "{{ vault_cloufflare_api_token }}"
 
 dns_opendata02_ip: 5.148.188.59
-dns_wernstrom_ip: 194.126.200.58
+dns_farnsworth_ip: 149.126.4.43
 dns_domains:
   - domain: opendata.ch
     records:
@@ -63,7 +63,7 @@ dns_domains:
       - {name: "www", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "www.transport", type: A, value: "{{ dns_opendata02_ip }}"}
 
-      - {name: "status.transport", type: A, value: "{{ dns_wernstrom_ip }}"}
+      - {name: "status.transport", type: A, value: "{{ dns_farnsworth_ip }}"}
 
       - {name: "@", type: MX, value: "aspmx.l.google.com", priority: 1}
       - {name: "@", type: MX, value: "alt1.aspmx.l.google.com", priority: 5}
