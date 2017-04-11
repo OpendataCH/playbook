@@ -35,6 +35,7 @@ vhosts:
       - finance.opendata.ch
       - energy.opendata.ch
       - food.opendata.ch
+      - tourism.opendata.ch
       - www.offenedaten.ch
       - offenedaten.ch
   - servername: transport.opendata.ch
@@ -58,6 +59,7 @@ dns_domains:
       - {name: "food", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "glam", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "make", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "tourism", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "transport", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "trans", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "www", type: A, value: "{{ dns_opendata02_ip }}"}
