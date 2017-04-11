@@ -7,10 +7,15 @@ RewriteRule ^(.*)$ https://opendata.ch/$1 [R=301,L]
 # Redirect from old wiki URLs to new wiki URLs
 RewriteRule ^doku.php https://make.opendata.ch/wiki/doku.php [R=301,L,QSA]
 
+# Redirect convenience URLs
 RewriteRule ^/?schule.*$ https://make.opendata.ch/?page_id=795
 RewriteRule ^/?school.*$ https://make.opendata.ch/?page_id=806
 RewriteRule ^/?ecole.*$ https://make.opendata.ch/?page_id=912
 RewriteRule ^/?legal.*$ https://make.opendata.ch/?page_id=541
+
+# Redirect to tourism event page
+RewriteCond %{HTTP_HOST} tourism\.opendata\.ch$ [NC]
+RewriteRule ^/$ https://opendata.ch/projects/open-tourism-data-hackdays [R=301,L]
 
 # Redirect French users to French site
 RewriteCond %{HTTP_HOST} make\.opendata\.ch$ [NC]
