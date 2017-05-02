@@ -22,10 +22,6 @@ RewriteCond %{HTTP_HOST} make\.opendata\.ch$ [NC]
 RewriteCond %{HTTP:Accept-Language} ^(fr.*) [NC]
 RewriteRule .* /?lang=fr [L,R=301,QSA]
 
-RewriteCond %{HTTP_HOST} opendata\.ch$ [NC]
-RewriteCond %{HTTP:Accept-Language} ^(fr.*) [NC]
-RewriteRule .* https://fr.opendata.ch/ [L,R=301,QSA]
-
 # Redirect to https://
 RewriteCond %{HTTPS} !on
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L,QSA]
