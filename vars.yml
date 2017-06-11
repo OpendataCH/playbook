@@ -88,3 +88,4 @@ dns_domains:
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
+      - {name: "transport-beta", type: CNAME, value: "transport-opendata.search.ch"}
