@@ -44,6 +44,7 @@ vhosts:
     template: letsencrypt_noredirect
   - servername: transport-beta.opendata.ch
     documentroot: "{{ transport_beta_root }}/web"
+    template: letsencrypt_noredirect
 
 cloudflare_email: hannes@opendata.ch
 cloufflare_api_token: "{{ vault_cloufflare_api_token }}"
