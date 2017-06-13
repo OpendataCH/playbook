@@ -15,7 +15,7 @@
 - name: get existing vhost aliases
   shell: sudo nine-manage-vhosts virtual-host list --json
   register: vhost_aliases_result
-  always_run: yes
+  check_mode: no
   changed_when: false
 
 - name: add vhost aliases

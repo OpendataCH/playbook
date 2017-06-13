@@ -2,7 +2,7 @@
 - name: get existing databases
   command: sudo nine-manage-databases database list --machine-readable
   register: databases_list_result
-  always_run: yes
+  check_mode: no
   changed_when: false
 
 - name: add databases
