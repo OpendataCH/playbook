@@ -2,6 +2,7 @@
 documentroot: /home/www-data
 opendata_ch_root: "{{ documentroot }}/opendata.ch"
 transport_root: "{{ documentroot }}/transport.opendata.ch"
+transport_beta_root: "{{ documentroot }}/transport-beta.opendata.ch"
 wiki_root: "{{ documentroot }}/opendata.ch/wiki"
 
 opendata_ch_database_name: nmd_opendata_ch
@@ -41,6 +42,8 @@ vhosts:
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
     template: letsencrypt_noredirect
+  - servername: transport-beta.opendata.ch
+    documentroot: "{{ transport_beta_root }}/web"
 
 cloudflare_email: hannes@opendata.ch
 cloufflare_api_token: "{{ vault_cloufflare_api_token }}"

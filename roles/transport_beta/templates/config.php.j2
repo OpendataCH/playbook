@@ -1,0 +1,20 @@
+<?php
+
+$client = new \Buzz\Client\Curl();
+$client->setTimeout(60);
+
+$app['debug'] = false;
+
+$app['http_cache'] = false;
+
+$app['buzz.client'] = $client;
+
+$app['monolog.level'] = Monolog\Logger::ERROR;
+
+$app['redis.config'] = false;
+
+$app['stats.config'] = ['enabled' => false];
+
+$app['rate_limiting.config'] = ['enabled' => false, 'limit' => 3];
+
+$app['proxy'] = false;
