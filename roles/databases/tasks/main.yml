@@ -6,6 +6,6 @@
   changed_when: false
 
 - name: add databases
-  shell: sudo nine-manage-databases database create --user="{{ item.user | quote }}" --password="{{ item.password | quote }}" "{{ item.name | quote }}"
+  shell: sudo nine-manage-databases database create --user="{{ item.user | quote }}" --password="{{ item.password | quote }}" "{{ item.name | quote }}" warn=no
   when: not item.name in databases_list_result.stdout
   with_items: "{{ databases }}"

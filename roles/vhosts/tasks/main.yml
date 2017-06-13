@@ -1,6 +1,6 @@
 ---
 - name: create Let's Encrypt certificates
-  shell: sudo nine-manage-vhosts certificate create --virtual-host="{{ item.servername | quote }}"
+  shell: sudo nine-manage-vhosts certificate create --virtual-host="{{ item.servername | quote }}" warn=no
   args:
     creates: "/etc/ssl/letsencrypt/certs/{{ item.servername }}/cert.pem"
     removes: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
@@ -8,7 +8,7 @@
   with_items: "{{ vhosts }}"
 
 - name: add vhosts
-  shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}" --template="{{ item.template | default('default') | quote }}"
+  shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}" --template="{{ item.template | default('default') | quote }}" warn=no
   args:
     creates: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
   with_items: "{{ vhosts }}"
@@ -20,7 +20,7 @@
   changed_when: false
 
 - name: add vhost aliases
-  shell: sudo nine-manage-vhosts alias create "{{ item.1 | quote }}" --virtual-host="{{ item.0.servername | quote }}"
+  shell: sudo nine-manage-vhosts alias create "{{ item.1 | quote }}" --virtual-host="{{ item.0.servername | quote }}" warn=no
   when: item.1 not in vhost_aliases_result.stdout
   with_subelements:
     - "{{ vhosts | selectattr('aliases', 'defined') | list }}"
