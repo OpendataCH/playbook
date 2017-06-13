@@ -1,6 +1,6 @@
 ---
 - name: get existing databases
-  command: sudo nine-manage-databases database list --machine-readable
+  shell: sudo nine-manage-databases database list --machine-readable warn=no
   register: databases_list_result
   check_mode: no
   changed_when: false
