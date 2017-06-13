@@ -3,11 +3,12 @@
   shell: sudo nine-manage-vhosts certificate create --virtual-host="{{ item.servername | quote }}"
   args:
     creates: "/etc/ssl/letsencrypt/certs/{{ item.servername }}/cert.pem"
-  when: item.template == "default_letsencrypt_https"
+    removes: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
+  when: item.template is defined and (item.template == "default_letsencrypt_https" or item.template == "letsencrypt_noredirect")
   with_items: "{{ vhosts }}"
 
 - name: add vhosts
-  shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}" --template="{{ item.template | default(default) | quote }}"
+  shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}" --template="{{ item.template | default('default') | quote }}"
   args:
     creates: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
   with_items: "{{ vhosts }}"
