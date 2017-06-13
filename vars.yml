@@ -69,6 +69,7 @@ dns_domains:
       - {name: "www", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "www.transport", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "transport-beta", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "www.transport-beta", type: A, value: "{{ dns_opendata02_ip }}"}
 
       - {name: "status.transport", type: A, value: "{{ dns_farnsworth_ip }}"}
 
