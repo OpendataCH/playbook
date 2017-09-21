@@ -16,8 +16,7 @@ RewriteRule ^/?legal.*$ https://make.opendata.ch/?page_id=541
 # Redirect to tourism event page
 RewriteCond %{HTTP_HOST} tourism\.opendata\.ch$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^/?vip.*$ https://opendata.ch/events/vip-programm-open-tourism-data-hackdays/
-RewriteRule ^(.*)$ https://opendata.ch/projects/open-tourism-data-hackdays [L,R=301,QSA]
+RewriteRule .* https://opendata.ch/projects/open-tourism-data-hackdays [L,R=301,QSA]
 
 # Redirect French users to French site
 RewriteCond %{HTTP_HOST} make\.opendata\.ch$ [NC]
