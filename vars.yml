@@ -90,7 +90,7 @@ dns_domains:
 
       - {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
       - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
-      - {name: "hack", type: CNAME, value: "linode1.datalets.ch"}
+      - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
