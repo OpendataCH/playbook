@@ -5,6 +5,10 @@ cache: pip
 install:
   - pip install ansible
 
+env:
+  global:
+    - ANSIBLE_FORCE_COLOR=True
+
 script:
   - ANSIBLE_VAULT_PASSWORD_FILE= ansible-playbook --syntax-check test.yml
 
