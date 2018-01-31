@@ -1,7 +1,0 @@
----
-- hosts: webservers
-  vars_files:
-    - vault.yml
-    - vars.yml
-  roles:
-    - transport_beta
