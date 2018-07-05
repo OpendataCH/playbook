@@ -9,6 +9,9 @@ env:
   global:
     - ANSIBLE_FORCE_COLOR=True
 
+before_script:
+  - echo "password" > vault_password.txt
+
 script:
   - ansible-playbook --syntax-check test.yml
 
