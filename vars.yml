@@ -52,6 +52,7 @@ dns_domains:
     records:
       - {name: "@", type: A, value: "{{ dns_opendata02_ip }}"}
 
+      - {name: "chat", type: A, value: "159.69.87.110"}
       - {name: "en", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "energy", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "finance", type: A, value: "{{ dns_opendata02_ip }}"}
@@ -64,9 +65,8 @@ dns_domains:
       - {name: "trans", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "www", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "www.transport", type: A, value: "{{ dns_opendata02_ip }}"}
-
-      - {name: "status.transport", type: A, value: "{{ dns_farnsworth_ip }}"}
-
+      - {name: "status.transport", type: A, value: "{{ dns_farnsworth_ip }}"}x
+      
       - {name: "@", type: MX, value: "aspmx.l.google.com", priority: 1}
       - {name: "@", type: MX, value: "alt1.aspmx.l.google.com", priority: 5}
       - {name: "@", type: MX, value: "alt2.aspmx.l.google.com", priority: 5}
@@ -90,5 +90,4 @@ dns_domains:
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
       - {name: "vornamen", type: CNAME, value: "snowflake27.snowflakehosting.ch"}
       - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
-      - {name: "chat", type: CNAME, value: "159.69.87.110"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
