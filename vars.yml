@@ -84,11 +84,12 @@ dns_domains:
       - {name: "groups", type: CNAME, value: "ghs.googlehosted.com"}
 
       - {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
+      - {name: "digitallearninglab", type: CNAME, value: "digitallearninglab.opendata.ch.herokudns.com"}
       - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
       - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
-      - {name: "vornamen", type: CNAME, value: "snowflake27.snowflakehosting.ch"}
       - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
+      - {name: "vornamen", type: CNAME, value: "snowflake27.snowflakehosting.ch"}      
