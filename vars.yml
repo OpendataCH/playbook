@@ -92,4 +92,4 @@ dns_domains:
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
       - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
-      - {name: "vornamen", type: CNAME, value: "snowflake27.snowflakehosting.ch"}      
+      - {name: "vornamen", type: CNAME, value: "shared02.snowflakehosting.ch"}      
