@@ -52,7 +52,6 @@ dns_domains:
     records:
       - {name: "@", type: A, value: "{{ dns_opendata02_ip }}"}
 
-      - {name: "chat", type: A, value: "159.69.87.110"}
       - {name: "en", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "energy", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "finance", type: A, value: "{{ dns_opendata02_ip }}"}
@@ -84,7 +83,9 @@ dns_domains:
       - {name: "groups", type: CNAME, value: "ghs.googlehosted.com"}
 
       - {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
+      - {name: "chat", type: A, value: "159.69.87.110"}
       - {name: "digitallearninglab", type: CNAME, value: "digitallearninglab.opendata.ch.herokudns.com"}
+      - {name: "forum", type: CNAME, value: "linode1.datalets.ch"}
       - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
       - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
