@@ -38,6 +38,7 @@ vhosts:
       - tourism.opendata.ch
       - www.offenedaten.ch
       - offenedaten.ch
+      - prototypefund.opendata.ch
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
     template: letsencrypt_noredirect
