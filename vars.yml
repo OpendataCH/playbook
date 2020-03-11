@@ -92,4 +92,8 @@ dns_domains:
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
       - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
-      - {name: "vornamen", type: CNAME, value: "shared02.snowflakehosting.ch"}      
+      - {name: "vornamen", type: CNAME, value: "shared02.snowflakehosting.ch"}
+      - {name: "prototypefund-app", type: CNAME, value: "opendata-prototypefund-app.visiblesolutions.ch"}
+
+      - {name: "@", type: TXT, value: "v=spf1 include:spf.mandrillapp.com ?all"}
+      - {name: "mandrill._domainkey", type: TXT, value: "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrLHiExVd55zd/IQ/J/mRwSRMAocV/hMB3jXwaHH36d9NaVynQFYV8NaWi69c1veUtRzGt7yAioXqLj7Z4TeEUoOLgrKsn8YnckGs9i3B3tVFB+Ch/4mPhXWiNfNdynHWBcPcbJ8kjEQ2U8y78dHZj1YeRXXVvWob2OaKynO8/lQIDAQAB;"}
