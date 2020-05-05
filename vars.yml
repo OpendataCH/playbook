@@ -90,6 +90,7 @@ dns_domains:
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
+      - {name: "survey", type: CNAME, value: "integrative-refuge-zu7p1l40f6rbtx0y2soqvwdo.herokudns.com"}
       - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       - {name: "vornamen", type: CNAME, value: "shared02.snowflakehosting.ch"}
