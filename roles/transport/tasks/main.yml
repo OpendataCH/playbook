@@ -13,3 +13,6 @@
 
 - name: create .htaccess
   template: src=htaccess.j2 dest="{{ transport_root }}/.htaccess"
+
+- name: create .user.ini
+  template: src=user.ini.j2 dest="{{ transport_root }}/.user.ini"
