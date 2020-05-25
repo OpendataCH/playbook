@@ -12,4 +12,4 @@
   template: src=config.php.j2 dest="{{ transport_root }}/config.php"
 
 - name: create .user.ini
-  template: src=user.ini.j2 dest="{{ transport_root }}/.user.ini"
+  template: src=user.ini.j2 dest="{{ transport_root }}/web/.user.ini"
