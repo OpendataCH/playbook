@@ -25,14 +25,6 @@ RewriteRule ^/?$ https://opendata.ch/projects/open-tourism-data-hackdays [L,R=30
 RewriteCond %{HTTPS} !on
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L,QSA]
 
-# Make PHP accept big stuff
-php_value post_max_size 301M
-php_value upload_max_filesize 300M
-
-# New Relic
-php_value newrelic.appname "opendata.ch"
-php_value newrelic.enabled "true"
-
 # BEGIN WordPress
 RewriteEngine On
 RewriteBase /
