@@ -87,6 +87,7 @@ dns_domains:
       - {name: "forum", type: CNAME, value: "linode1.datalets.ch"}
       - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
       - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
+      - {name: "hack.glam", type: CNAME, value: "cubed-wombat-bkp27q0i7xdfg1yw2jsicsi1.herokudns.com"}
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
