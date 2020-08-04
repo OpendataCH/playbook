@@ -4,7 +4,7 @@
 
 Most changes can be made in the file `vars.yml`. Commit and push your changes 
 to [GitHub](https://github.com/OpendataCH/playbook) 
-and [Travis CI](https://travis-ci.org/OpendataCH/playbook) will execute the 
+and [GitHub Actions](https://github.com/OpendataCH/playbook/actions) will execute the 
 following command which applies the changes to the server:
 
 ```
