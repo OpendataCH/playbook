@@ -20,7 +20,7 @@
   changed_when: false
 
 - name: add vhost aliases
-  shell: sudo nine-manage-vhosts alias create "{{ item.1 | quote }}" --virtual-host="{{ item.0.servername | quote }}" warn=no
+  shell: sudo nine-manage-vhosts alias create "{{ item.1 | quote }}" --virtual-host="{{ item.0.servername | quote }}" || sudo nine-manage-vhosts certificate create --virtual-host="{{ item.0.servername | quote }}" warn=no
   when: item.1 not in vhost_aliases_result.stdout
   with_subelements:
     - "{{ vhosts | selectattr('aliases', 'defined') | list }}"
