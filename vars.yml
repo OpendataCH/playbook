@@ -96,7 +96,8 @@ dns_domains:
       - {name: "survey", type: CNAME, value: "integrative-refuge-zu7p1l40f6rbtx0y2soqvwdo.herokudns.com"}
       - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
-      - {name: "vornamen", type: CNAME, value: "shared02.snowflakehosting.ch"}
+      - {name: "vornamen", type: A, value: "185.17.69.73"}
+      - {name: "vornamen", type: AAAA, value: "2a04:503:0:1004::73"}
       - {name: "prototypefund-app", type: CNAME, value: "opendata-prototypefund-app.visiblesolutions.ch"}
       - {name: "helpwithcovid", type: CNAME, value: "sinuous-trout-2drs8fgmpuqpmoi3yknq6g54.herokudns.com"}
       - {name: "jppnhhms2wpgqmnqk7p7mlcr2d2iymrt._domainkey", type: CNAME, value: "jppnhhms2wpgqmnqk7p7mlcr2d2iymrt.dkim.amazonses.com"}
