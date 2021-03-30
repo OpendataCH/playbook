@@ -24,7 +24,7 @@ Fetch records:
 ```
 curl "https://api.cloudflare.com/client/v4/zones/c70c67baa5ba6666d60303664a926522/dns_records?per_page=100" \
      -H 'X-Auth-Email: hannes@opendata.ch' \
-     -H 'X-Auth-Key: CLOUDFLARE_API_TOKEN' \
+     -H 'X-Auth-Key: CLOUDFLARE_API_TOKEN'
 ```
 
 Delete record:
@@ -32,7 +32,7 @@ Delete record:
 ```
 curl -X "DELETE" "https://api.cloudflare.com/client/v4/zones/c70c67baa5ba6666d60303664a926522/dns_records/DNS_RECORD_ID" \
      -H 'X-Auth-Email: hannes@opendata.ch' \
-     -H 'X-Auth-Key: CLOUDFLARE_API_TOKEN' \
+     -H 'X-Auth-Key: CLOUDFLARE_API_TOKEN'
 ```
 
 ## Vault
