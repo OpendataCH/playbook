@@ -90,6 +90,7 @@ dns_domains:
       - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
       - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
       - {name: "hack.glam", type: CNAME, value: "cubed-wombat-bkp27q0i7xdfg1yw2jsicsi1.herokudns.com"}
+      - {name: "hack.farming", type: CNAME, value: "convex-sagebrush-li3xrt6dmwsloozu49cni7ml.herokudns.com"}
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
