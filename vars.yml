@@ -86,21 +86,25 @@ dns_domains:
       - {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
       - {name: "chat", type: A, value: "159.69.87.110"}
       - {name: "digitallearninglab", type: CNAME, value: "digitallearninglab.opendata.ch.herokudns.com"}
-      - {name: "forum", type: CNAME, value: "linode1.datalets.ch"}
       - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
-      - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
-      - {name: "hack.glam", type: CNAME, value: "cubed-wombat-bkp27q0i7xdfg1yw2jsicsi1.herokudns.com"}
+      - {name: "forum", type: CNAME, value: "linode1.datalets.ch"}
       - {name: "hack.farming", type: CNAME, value: "convex-sagebrush-li3xrt6dmwsloozu49cni7ml.herokudns.com"}
+      - {name: "hack.glam", type: CNAME, value: "cubed-wombat-bkp27q0i7xdfg1yw2jsicsi1.herokudns.com"}
+      - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
+      - {name: "helpwithcovid", type: CNAME, value: "sinuous-trout-2drs8fgmpuqpmoi3yknq6g54.herokudns.com"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
+      - {name: "prototypefund-app", type: CNAME, value: "opendata-prototypefund-app.visiblesolutions.ch"}
       - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
       - {name: "survey", type: CNAME, value: "integrative-refuge-zu7p1l40f6rbtx0y2soqvwdo.herokudns.com"}
       - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       - {name: "vornamen", type: A, value: "185.17.69.73"}
       - {name: "vornamen", type: AAAA, value: "2a04:503:0:1004::73"}
-      - {name: "prototypefund-app", type: CNAME, value: "opendata-prototypefund-app.visiblesolutions.ch"}
-      - {name: "helpwithcovid", type: CNAME, value: "sinuous-trout-2drs8fgmpuqpmoi3yknq6g54.herokudns.com"}
+      
+      - {name: "k2._domainkey.opendata.ch", type: CNAME, value: "dkim2.mcsv.net"}
+      - {name: "k3._domainkey.opendata.ch", type: CNAME, value: "dkim3.mcsv.net"}
+      
       - {name: "jppnhhms2wpgqmnqk7p7mlcr2d2iymrt._domainkey", type: CNAME, value: "jppnhhms2wpgqmnqk7p7mlcr2d2iymrt.dkim.amazonses.com"}
       - {name: "uk4ay6zoilmukitfmqayzlxhnp7un2y4._domainkey", type: CNAME, value: "uk4ay6zoilmukitfmqayzlxhnp7un2y4.dkim.amazonses.com"}
       - {name: "h6gkoatbxlcmjs4vaszom5vy4tb52i4j._domainkey", type: CNAME, value: "h6gkoatbxlcmjs4vaszom5vy4tb52i4j.dkim.amazonses.com"}
