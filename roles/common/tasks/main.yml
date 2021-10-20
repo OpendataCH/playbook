@@ -14,4 +14,4 @@
   file: path=~/bin state=directory
 
 - name: install Composer
-  get_url: url=https://getcomposer.org/download/1.10.6/composer.phar dest=~/bin/composer mode=0755 checksum=sha256:29bdac1bda34d8902b9f9e4f5816de08879b8f3fafad901e4283519cdefbee7b
+  get_url: url=https://getcomposer.org/download/1.10.23/composer.phar dest=~/bin/composer mode=0755 checksum=sha256:2fc3ae370a979602a3bc2c950a38db02e51b4ca2072f7b8e15a518b443b835e7
