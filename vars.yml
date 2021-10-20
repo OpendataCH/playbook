@@ -40,6 +40,7 @@ vhosts:
       - offenedaten.ch
       - prototypefund.opendata.ch
       - beta.opendata.ch
+      - old.opendata.ch
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
     template: letsencrypt_noredirect
@@ -67,6 +68,7 @@ dns_domains:
       - {name: "www.transport", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "prototypefund", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "beta", type: A, value: "{{ dns_opendata02_ip }}"}
+      - {name: "old", type: A, value: "{{ dns_opendata02_ip }}"}
 
       - {name: "@", type: MX, value: "aspmx.l.google.com", priority: 1}
       - {name: "@", type: MX, value: "alt1.aspmx.l.google.com", priority: 5}
