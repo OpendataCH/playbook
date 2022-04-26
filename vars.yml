@@ -103,6 +103,7 @@ dns_domains:
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       - {name: "vornamen", type: A, value: "185.17.69.73"}
       - {name: "vornamen", type: AAAA, value: "2a04:503:0:1004::73"}
+      - {name: "10years", type: CNAME, value: "cname.vercel-dns.com"}
       
       - {name: "k2._domainkey.opendata.ch", type: CNAME, value: "dkim2.mcsv.net"}
       - {name: "k3._domainkey.opendata.ch", type: CNAME, value: "dkim3.mcsv.net"}
