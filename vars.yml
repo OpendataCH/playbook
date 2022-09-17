@@ -95,6 +95,7 @@ dns_domains:
       - {name: "hack.glam", type: CNAME, value: "cubed-wombat-bkp27q0i7xdfg1yw2jsicsi1.herokudns.com"}
       - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
       - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
+      - {name: "heatsg.energy", type: CNAME, value: "cloud-opendata-02.nine.ch"}
       - {name: "helpwithcovid", type: CNAME, value: "sinuous-trout-2drs8fgmpuqpmoi3yknq6g54.herokudns.com"}
       - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "prototypefund-app", type: CNAME, value: "opendata-prototypefund-app.visiblesolutions.ch"}
