@@ -94,10 +94,8 @@ dns_domains:
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       
       # dribdat instances
-      - {name: "hack.rehoja", type: CNAME, value: "cloud-opendata-02.nine.ch"}
-      - {name: "hack.energy", type: CNAME, value: "cloud-opendata-02.nine.ch"}
-      - {name: "hack.farming", type: CNAME, value: "convex-sagebrush-li3xrt6dmwsloozu49cni7ml.herokudns.com"}
-      - {name: "hack.glam", type: CNAME, value: "cubed-wombat-bkp27q0i7xdfg1yw2jsicsi1.herokudns.com"}
+      - {name: "hack.farming", type: CNAME, value: "morpho1.datalets.ch"}
+      - {name: "hack.glam", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
       
       # community apps (no longer maintained)
