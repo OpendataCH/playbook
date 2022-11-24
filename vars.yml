@@ -54,6 +54,7 @@ dns_domains:
     records:
       - {name: "@", type: A, value: "{{ dns_opendata02_ip }}"}
 
+      # Wordpress sites
       - {name: "en", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "energy", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "finance", type: A, value: "{{ dns_opendata02_ip }}"}
@@ -70,6 +71,7 @@ dns_domains:
       - {name: "beta", type: A, value: "{{ dns_opendata02_ip }}"}
       - {name: "old", type: A, value: "{{ dns_opendata02_ip }}"}
 
+      # mail servers
       - {name: "@", type: MX, value: "aspmx.l.google.com", priority: 1}
       - {name: "@", type: MX, value: "alt1.aspmx.l.google.com", priority: 5}
       - {name: "@", type: MX, value: "alt2.aspmx.l.google.com", priority: 5}
@@ -78,35 +80,44 @@ dns_domains:
       - {name: "@", type: MX, value: "aspmx4.googlemail.com", priority: 10}
       - {name: "@", type: MX, value: "aspmx5.googlemail.com", priority: 10}
 
+      # office tools
       - {name: "calendar", type: CNAME, value: "ghs.google.com"}
       - {name: "mail", type: CNAME, value: "ghs.google.com"}
       - {name: "docs", type: CNAME, value: "ghs.google.com"}
       - {name: "sites", type: CNAME, value: "ghs.google.com"}
       - {name: "webmail", type: CNAME, value: "ghs.google.com"}
       - {name: "groups", type: CNAME, value: "ghs.googlehosted.com"}
-
-      - {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
-      - {name: "chat", type: A, value: "159.69.87.110"}
-      - {name: "digitallearninglab", type: CNAME, value: "digitallearninglab.opendata.ch.herokudns.com"}
-      - {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
+      
+      # community tools
       - {name: "forum", type: CNAME, value: "linode1.datalets.ch"}
+      - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
+      - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
+      
+      # dribdat instances
+      - {name: "hack.rehoja", type: CNAME, value: "cloud-opendata-01.nine.ch"}
       - {name: "hack.energy", type: CNAME, value: "cloud-opendata-01.nine.ch"}
       - {name: "hack.farming", type: CNAME, value: "convex-sagebrush-li3xrt6dmwsloozu49cni7ml.herokudns.com"}
       - {name: "hack.glam", type: CNAME, value: "cubed-wombat-bkp27q0i7xdfg1yw2jsicsi1.herokudns.com"}
       - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
-      - {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
+      
+      # community apps (no longer maintained)
+      #- {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
+      #- {name: "chat", type: A, value: "159.69.87.110"}
+      #- {name: "flows.transport", type: CNAME, value: "swiss-transport-flows.herokuapp.com"}
+      #- {name: "healthinsurance", type: CNAME, value: "ship.seantis.ch"}
+      #- {name: "helpwithcovid", type: CNAME, value: "sinuous-trout-2drs8fgmpuqpmoi3yknq6g54.herokudns.com"}
+      #- {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
+      #- {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
+      #- {name: "survey", type: CNAME, value: "integrative-refuge-zu7p1l40f6rbtx0y2soqvwdo.herokudns.com"}
+      
+      # community apps (active)
       - {name: "heatsg.energy", type: CNAME, value: "cloud-opendata-02.nine.ch"}
-      - {name: "helpwithcovid", type: CNAME, value: "sinuous-trout-2drs8fgmpuqpmoi3yknq6g54.herokudns.com"}
-      - {name: "ipollution", type: CNAME, value: "gentle-brook-9727.herokuapp.com"}
       - {name: "prototypefund-app", type: CNAME, value: "opendata-prototypefund-app.visiblesolutions.ch"}
-      - {name: "request", type: CNAME, value: "request-data.herokuapp.com"}
-      - {name: "survey", type: CNAME, value: "integrative-refuge-zu7p1l40f6rbtx0y2soqvwdo.herokudns.com"}
-      - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
-      - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       - {name: "vornamen", type: A, value: "185.17.69.73"}
       - {name: "vornamen", type: AAAA, value: "2a04:503:0:1004::73"}
       - {name: "10years", type: CNAME, value: "cname.vercel-dns.com"}
       
+      # domain protection
       - {name: "k2._domainkey.opendata.ch", type: CNAME, value: "dkim2.mcsv.net"}
       - {name: "k3._domainkey.opendata.ch", type: CNAME, value: "dkim3.mcsv.net"}
       
