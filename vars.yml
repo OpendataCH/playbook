@@ -94,9 +94,9 @@ dns_domains:
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       
       # dribdat instances
-      - {name: "hack.farming", type: CNAME, value: "cloud-opendata-01.nine.ch"}
-      - {name: "hack.glam", type: CNAME, value: "cloud-opendata-01.nine.ch"}
-      - {name: "hack", type: CNAME, value: "hack.opendata.ch.herokudns.com"}
+      - {name: "hack.farming", type: CNAME, value: "opendatach.dribdat.cc"}
+      - {name: "hack.glam", type: CNAME, value: "opendatach.dribdat.cc"}
+      - {name: "hack", type: CNAME, value: "opendatach.dribdat.cc"}
       
       # community apps (no longer maintained)
       #- {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
