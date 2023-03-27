@@ -89,13 +89,14 @@ dns_domains:
       - {name: "groups", type: CNAME, value: "ghs.googlehosted.com"}
       
       # community tools
+      - {name: "team", type: CNAME, value: "cloud-opendata-05.nine.ch"}
       - {name: "forum", type: CNAME, value: "linode1.datalets.ch"}
-      - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       
       # dribdat instances
-      - {name: "hack.farming", type: CNAME, value: "cloud-opendata-01.nine.ch"}
-      - {name: "hack.glam", type: CNAME, value: "cloud-opendata-01.nine.ch"}
+      - {name: "hack.farming", type: CNAME, value: "cloud-opendata-02.nine.ch"}
+      - {name: "hack.energy", type: CNAME, value: "cloud-opendata-02.nine.ch"}
+      - {name: "hack.glam", type: CNAME, value: "cloud-opendata-02.nine.ch"}
       - {name: "hack", type: CNAME, value: "cloud-opendata-01.nine.ch"}
       
       # community apps (no longer maintained)
