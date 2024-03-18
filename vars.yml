@@ -98,7 +98,6 @@ dns_domains:
       - {name: "hack.energy", type: CNAME, value: "cloud-opendata-02.nine.ch"}
       - {name: "hack.glam", type: CNAME, value: "cloud-opendata-02.nine.ch"}
       - {name: "hack", type: CNAME, value: "cloud-opendata-01.nine.ch"}
-      - {name: "reciprocal", type: CNAME, value: "cloud-opendata-05.nine.ch"}
       
       # community apps (no longer maintained)
       #- {name: "*.budget", type: CNAME, value: "open-budget.herokuapp.com"}
