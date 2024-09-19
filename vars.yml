@@ -89,8 +89,7 @@ dns_domains:
       - {name: "groups", type: CNAME, value: "ghs.googlehosted.com"}
       
       # community tools
-      - {name: "team", type: CNAME, value: "morpho1.datalets.ch"}
-      - {name: "forum", type: CNAME, value: "linode1.datalets.ch"}
+      - {name: "forum", type: CNAME, value: "soda2.datalets.ch"}
       - {name: "tickets", type: CNAME, value: "www.pretix.eu"}
       
       # dribdat instances
