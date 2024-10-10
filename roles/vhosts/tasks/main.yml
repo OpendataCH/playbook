@@ -8,7 +8,7 @@
   with_items: "{{ vhosts }}"
 
 - name: add vhosts
-  shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}" --template="{{ item.template | default('default') | quote }}" --template-variable PHP_VERSION=7.4
+  shell: sudo nine-manage-vhosts virtual-host create "{{ item.servername | quote }}" --webroot="{{ item.documentroot | quote }}" --template="{{ item.template | default('default') | quote }}" --template-variable PHP_VERSION={{ item.php_version | default('7.4') | quote }}
   args:
     creates: "/etc/apache2/user-vhosts/{{ item.servername }}.conf"
   with_items: "{{ vhosts }}"
