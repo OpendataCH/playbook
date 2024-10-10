@@ -44,6 +44,7 @@ vhosts:
   - servername: transport.opendata.ch
     documentroot: "{{ transport_root }}/web"
     template: letsencrypt_noredirect
+    php_version: 8.2
 
 cloudflare_email: hannes@opendata.ch
 cloufflare_api_token: "{{ vault_cloufflare_api_token }}"
