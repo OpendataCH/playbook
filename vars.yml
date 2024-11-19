@@ -112,7 +112,7 @@ dns_domains:
       # community apps (active)
       - {name: "heatsg.energy", type: CNAME, value: "cloud-opendata-02.nine.ch"}
       - {name: "prototypefund-app", type: CNAME, value: "opendata-prototypefund-app.visiblesolutions.ch"}
-      - {name: "showcase", type: CNAME, value: "cloud-opendata-05.nine.ch"}
+      - {name: "showcase", type: CNAME, value: "cloud-opendata-02.nine.ch"}
       - {name: "vornamen", type: A, value: "185.17.69.73"}
       - {name: "vornamen", type: AAAA, value: "2a04:503:0:1004::73"}
       - {name: "10years", type: CNAME, value: "cname.vercel-dns.com"}
